@@ -43,3 +43,61 @@ remote:
 To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
  * [new branch]      dev -> dev
 ```
+
+## Exercise 2
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add --all
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git stash push -m 'home page'
+Saved working directory and index state On dev: home page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add --all
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git stash push -m 'about page'
+Saved working directory and index state On dev: about page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add .
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git stash push -m 'team page'
+Saved working directory and index state On dev: team page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git stash list
+stash@{0}: On dev: team page
+stash@{1}: On dev: about page
+stash@{2}: On dev: home page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git stash pop 'stash@{2}'
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Dropped stash@{2} (1ba3c9a9618ab4b1632fa437efcb56c2c620bce2)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git stash pop 'stash@{1}'
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (b1869aae154681461c6a23cca7ecf1e5966b5720)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add --all
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'setup home and about files'
+[dev 3bf43f5] setup home and about files
+ 2 files changed, 20 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 546 bytes | 273.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+   50388e6..3bf43f5  dev -> dev
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git stash pop 'stash@{0}'
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (05dacc47a5dcebc9fd45de4520aef08cff6c56ce)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git reset --hard
+HEAD is now at 3bf43f5 setup home and about files
+```
