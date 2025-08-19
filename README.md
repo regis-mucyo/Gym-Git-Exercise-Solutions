@@ -101,3 +101,31 @@ Dropped stash@{0} (05dacc47a5dcebc9fd45de4520aef08cff6c56ce)
 PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git reset --hard
 HEAD is now at 3bf43f5 setup home and about files
 ```
+
+# Bundle 2
+
+## Exercise 1
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add .
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'setup new file'
+[ft/bundle-2 cde043c] setup new file
+ 1 file changed, 10 insertions(+)
+ create mode 100644 services.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 434 bytes | 217.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+```
