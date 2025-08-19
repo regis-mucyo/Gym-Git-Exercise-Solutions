@@ -129,3 +129,143 @@ remote:
 To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 ```
+
+## Exercise 2
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git pull origin main
+remote: Enumerating objects: 2, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (2/2), 1.78 KiB | 455.00 KiB/s, done.
+From https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+   13da3f8..6b5d0e0  main       -> origin/main
+Updating 13da3f8..6b5d0e0
+Fast-forward
+ README.md     | 130 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html    |  10 +++++
+ home.html     |  10 +++++
+ services.html |  10 +++++
+ 4 files changed, 160 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add .
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'redesign service page'
+[ft/service-redesign fa8d529] redesign service page
+ 1 file changed, 1 insertion(+)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add services.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'Redesign service page for responsive'
+[main be9de37] Redesign service page for responsive
+ 1 file changed, 1 insertion(+)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+   6b5d0e0..be9de37  main -> main
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git diff
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git diff ft/service-redesign main
+diff --git a/services.html b/services.html
+index 3b1d461..d18e9b0 100644
+--- a/services.html
++++ b/services.html
+@@ -6,6 +6,6 @@
+   </head>
+   <body>
+     <p>This is services page!</p>
+-    <p>We Provide Different Services That Can Help You In Self-Development</p>
++    <p>Our Services are Valuable</p>
+   </body>
+ </html>
+(END)
++++ b/services.html
+@@ -6,6 +6,6 @@
+   </head>
+   <body>
+     <p>This is services page!</p>
+-    <p>We Provide Different Services That Can Help You In Self-Development</p>
++    <p>Our Services are Valuable</p>
+   </body>
+ </html>
+(END)
++++ b/services.html
+@@ -6,6 +6,6 @@
+   </head>
+   <body>
+     <p>This is services page!</p>
+-    <p>We Provide Different Services That Can Help You In Self-Development</p>
++    <p>Our Services are Valuable</p>
+   </body>
+ </html>
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git branch --show-current
+ft/service-redesign
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git merge ft/service redesign
+merge: ft/service - not something we can merge
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git merge ft/service-redesign
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add services.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'solve conflict between main branch and ft/service-redesign'
+[main f704399] solve conflict between main branch and ft/service-redesign
+ 1 file changed, 1 deletion(-)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+   7cb91d5..f704399  main -> main
+```
