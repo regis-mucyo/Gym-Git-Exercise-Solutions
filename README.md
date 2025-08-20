@@ -269,3 +269,147 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
    7cb91d5..f704399  main -> main
 ```
+
+# Bundle 3
+
+## Exercise 1
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning> cd '.\Git Exercises\'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add team.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'setup team file and add contents'
+[ft/team-page 779dccc] setup team file and add contents
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 486 bytes | 486.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises>
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log
+commit 779dccc810f04130157feb0f93ef09ee0e5fcb0e (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Regis Mucyo <mucyoregis250@gmail.com>
+Date:   Wed Aug 20 14:12:30 2025 +0200
+
+    setup team file and add contents
+
+commit 34a7354e775a52b12658fa18f1841edb61e5bb58 (origin/main, main, ft/contact-page)
+Author: Regis Mucyo <mucyoregis250@gmail.com>
+Date:   Tue Aug 19 17:02:44 2025 +0200
+
+    Exercise 2 from bundle 2
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log ft/team-page --oneline
+779dccc (origin/ft/team-page, ft/team-page) setup team file and add contents
+34a7354 (HEAD -> ft/contact-page, origin/main, main) Exercise 2 from bundle 2
+f704399 solve conflict between main branch and ft/service-redesign
+7cb91d5 Merge branch 'ft/service-redesign'
+be9de37 Redesign service page for responsive
+fa8d529 (origin/ft/service-redesign, ft/service-redesign) redesign service page
+6b5d0e0 Merge pull request #4 from regis-mucyo/ft/bundle-2
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> ^C
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git branch --show-current
+ft/contact-page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git cherry-pick 779dccc
+[ft/contact-page b84f653] setup team file and add contents
+ Date: Wed Aug 20 14:12:30 2025 +0200
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add contact.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'Setup contanct page and add contents'
+[ft/contact-page 729aa28] Setup contanct page and add contents
+ 1 file changed, 10 insertions(+)
+ create mode 100644 contact.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 898 bytes | 299.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add faq.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'setup a new page for FAQ'
+[ft/faq-page 5f5a419] setup a new page for FAQ
+ 1 file changed, 10 insertions(+)
+ create mode 100644 faq.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 453 bytes | 453.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log --oneline
+5f5a419 (HEAD -> ft/faq-page, origin/ft/faq-page) setup a new page for FAQ
+729aa28 (origin/ft/contact-page, ft/contact-page) Setup contanct page and add contents
+b84f653 setup team file and add contents
+34a7354 (origin/main, main) Exercise 2 from bundle 2
+f704399 solve conflict between main branch and ft/service-redesign
+7cb91d5 Merge branch 'ft/service-redesign'
+be9de37 Redesign service page for responsive
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git branch --show-current
+ft/faq-page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git revert 779dccc
+[ft/faq-page 587e064] Revert "fix a bug in team file"
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 team.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log --oneline
+587e064 (HEAD -> ft/faq-page) Revert "fix a bug in team file"
+5f5a419 (origin/ft/faq-page) setup a new page for FAQ
+729aa28 (origin/ft/contact-page, ft/contact-page) Setup contanct page and add contents
+b84f653 setup team file and add contents
+34a7354 (origin/main, main) Exercise 2 from bundle 2
+f704399 solve conflict between main branch and ft/service-redesign
+7cb91d5 Merge branch 'ft/service-redesign'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git branch --show-current
+ft/faq-page
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git status
+On branch ft/faq-page
+nothing to commit, working tree clean
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 279 bytes | 279.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+   5f5a419..587e064  ft/faq-page -> ft/faq-page
+```
