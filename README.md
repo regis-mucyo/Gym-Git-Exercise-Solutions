@@ -661,3 +661,35 @@ remote:
 To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
+
+## Bundle 5
+
+# Exercise 2
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned> cd .\git-cafe-exercise\
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git add index.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git commit -m 'fix: update the home page head'
+[main 38fdace] fix: update the home page head
+ 1 file changed, 399 insertions(+), 239 deletions(-)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.56 KiB | 800.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/regis-mucyo/git-cafe-exercise.git
+   d1d3f9c..38fdace  main -> main
+```
