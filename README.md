@@ -525,3 +525,139 @@ To https://github.com/regis-mucyo/git-learning.git
  * [new branch]      main -> main
 PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises>
 ```
+
+# Exercise 2
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add services.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'Add services list'
+[ft/footer 9ef9389] Add services list
+ 1 file changed, 7 insertions(+)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add --all
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'insert new contents'
+[ft/footer b545e85] insert new contents
+ 3 files changed, 7 insertions(+)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/footer
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 979 bytes | 489.00 KiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log --oneline
+78ee170 (HEAD -> ft/squashing, origin/main, main) add history of bundle 4 exercise 1
+736fc96 (git-copy/main) add new content in homepage
+44e0186 Revert "fix typo error"
+5033cb1 Bundle 3 exercise 2 git command history
+a12ca3b update page from home page
+6aeb530 (origin/ft/home-page-redesigning) update head for home page
+4799c3c Add command history of git for Exercise 2 in Bundle 3
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log --oneline
+78ee170 (HEAD -> main, origin/main, ft/squashing) add history of bundle 4 exercise 1
+736fc96 (git-copy/main) add new content in homepage
+44e0186 Revert "fix typo error"
+5033cb1 Bundle 3 exercise 2 git command history
+a12ca3b update page from home page
+6aeb530 (origin/ft/home-page-redesigning) update head for home page
+4799c3c Add command history of git for Exercise 2 in Bundle 3
+34a7354 Exercise 2 from bundle 2
+f704399 solve conflict between main branch and ft/service-redesign
+7cb91d5 Merge branch 'ft/service-redesign'
+be9de37 Redesign service page for responsive
+fa8d529 (origin/ft/service-redesign, ft/service-redesign) redesign service page
+6b5d0e0 Merge pull request #4 from regis-mucyo/ft/bundle-2
+6f3fc0e (origin/ft/bundle-2, ft/bundle-2) Add Git Commands history for exercise 1 in bundle 2
+d4d48b1 Merge pull request #3 from regis-mucyo/ft/bundle-2
+cde043c setup new file
+46eb17d (origin/dev, dev) Second exercise in bundle 1
+3bf43f5 setup home and about files
+50388e6 first exercise in bundle one
+13da3f8 initial first commit
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout ft/footer
+Switched to branch 'ft/footer'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log --oneline
+b545e85 (HEAD -> ft/footer, origin/ft/footer) insert new contents
+9ef9389 Add services list
+78ee170 (origin/main, main, ft/squashing) add history of bundle 4 exercise 1
+736fc96 (git-copy/main) add new content in homepage
+44e0186 Revert "fix typo error"
+5033cb1 Bundle 3 exercise 2 git command history
+a12ca3b update page from home page
+6aeb530 (origin/ft/home-page-redesigning) update head for home page
+4799c3c Add command history of git for Exercise 2 in Bundle 3
+34a7354 Exercise 2 from bundle 2
+f704399 solve conflict between main branch and ft/service-redesign
+7cb91d5 Merge branch 'ft/service-redesign'
+be9de37 Redesign service page for responsive
+fa8d529 (origin/ft/service-redesign, ft/service-redesign) redesign service page
+6b5d0e0 Merge pull request #4 from regis-mucyo/ft/bundle-2
+6f3fc0e (origin/ft/bundle-2, ft/bundle-2) Add Git Commands history for exercise 1 in bundle 2
+d4d48b1 Merge pull request #3 from regis-mucyo/ft/bundle-2
+cde043c setup new file
+46eb17d (origin/dev, dev) Second exercise in bundle 1
+3bf43f5 setup home and about files
+50388e6 first exercise in bundle one
+13da3f8 initial first commit
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout ft/squashing
+Switched to branch 'ft/squashing'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git merge --squash
+fatal: No remote for the current branch.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git merge --squash ft/footer
+Updating 78ee170..b545e85
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html    |  1 +
+ home.html     |  1 +
+ services.html | 12 ++++++++++++
+ 3 files changed, 14 insertions(+)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git log --oneline
+78ee170 (HEAD -> ft/squashing, origin/main, main) add history of bundle 4 exercise 1
+736fc96 (git-copy/main) add new content in homepage
+44e0186 Revert "fix typo error"
+5033cb1 Bundle 3 exercise 2 git command history
+a12ca3b update page from home page
+6aeb530 (origin/ft/home-page-redesigning) update head for home page
+4799c3c Add command history of git for Exercise 2 in Bundle 3
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+        modified:   home.html
+        modified:   services.html
+
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'footer changes squashing'
+[ft/squashing 8961b58] footer changes squashing
+ 3 files changed, 14 insertions(+)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/squashing
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 740 bytes | 246.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
