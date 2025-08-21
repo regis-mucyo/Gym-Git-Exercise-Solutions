@@ -413,3 +413,61 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
    5f5a419..587e064  ft/faq-page -> ft/faq-page
 ```
+
+## Exercise 2
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+........
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add home.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'update page from home page'
+[main a12ca3b] update page from home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/home-page-redesign
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesigning -> ft/home-page-redesign
+.........
+ *  History restored
+
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git branch --show-current
+ft/home-page-redesign
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add home.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'add heading'
+[ft/home-page-redesign a499380] add heading
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.79 KiB | 229.00 KiB/s, done.
+Total 14 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
