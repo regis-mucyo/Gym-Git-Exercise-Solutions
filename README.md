@@ -471,3 +471,57 @@ remote:
 To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 ```
+
+# Bundle 4
+
+## Exercise 1
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git remote -v
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (push)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git remote add git-copy https://github.com/regis-mucyo/git-copy.git
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git remote -v
+git-copy        https://github.com/regis-mucyo/git-copy.git (fetch)
+git-copy        https://github.com/regis-mucyo/git-copy.git (push)
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (push)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git remote remove git-copy
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git remote -v
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (push)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git remote add git-copy https://github.com/regis-mucyo/git-learning.git
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git remote -v
+git-copy        https://github.com/regis-mucyo/git-learning.git (fetch)
+git-copy        https://github.com/regis-mucyo/git-learning.git (push)
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (fetch)
+origin  https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git (push)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git add home.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git commit -m 'add new content in homepage'
+[main 736fc96] add new content in homepage
+ 1 file changed, 1 insertion(+)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
+   44e0186..736fc96  main -> main
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git push git-copy
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (46/46), done.
+Writing objects: 100% (49/49), 9.79 KiB | 385.00 KiB/s, done.
+Total 49 (delta 19), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (19/19), done.
+To https://github.com/regis-mucyo/git-learning.git
+ * [new branch]      main -> main
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises>
+```
