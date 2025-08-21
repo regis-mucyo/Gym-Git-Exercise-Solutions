@@ -526,7 +526,7 @@ To https://github.com/regis-mucyo/git-learning.git
 PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises>
 ```
 
-# Exercise 2
+## Exercise 2
 
 ```bash
 PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> git checkout -b ft/footer
@@ -662,9 +662,9 @@ To https://github.com/regis-mucyo/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
 
-## Bundle 5
+# Bundle 5
 
-# Exercise 2
+## Exercise 2
 
 ```bash
 PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned> cd .\git-cafe-exercise\
