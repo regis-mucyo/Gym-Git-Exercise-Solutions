@@ -693,3 +693,40 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/regis-mucyo/git-cafe-exercise.git
    d1d3f9c..38fdace  main -> main
 ```
+
+# Bundle 6
+
+## Exercise 1
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git checkout -b feat/update-menu
+Switched to a new branch 'feat/update-menu'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git status
+On branch feat/update-menu
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   css/style.css
+        modified:   index-3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git add --all
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git commit -m 'update image borders'
+[feat/update-menu 222f598] update image borders
+ 2 files changed, 329 insertions(+), 165 deletions(-)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git push origin feat/update-menu
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.51 KiB | 774.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'feat/update-menu' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/git-cafe-exercise/pull/new/feat/update-menu
+remote:
+To https://github.com/regis-mucyo/git-cafe-exercise.git
+ * [new branch]      feat/update-menu -> feat/update-menu
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise>
+```
