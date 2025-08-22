@@ -775,3 +775,58 @@ To https://github.com/regis-mucyo/git-cafe-exercise.git
  * [new branch]      bugfix/rename-title -> bugfix/rename-title
 PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise>
 ```
+
+## Exercise 3
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises> cd .\cloned\
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned> cd .\git-cafe-exercise\
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git checkout -b hotfix/contact-number
+Switched to a new branch 'hotfix/contact-number'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git status
+On branch hotfix/contact-number
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   css/style.css
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git status
+On branch hotfix/contact-number
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   css/style.css
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git commit -m 'fix typo of contact number'
+On branch hotfix/contact-number
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   css/style.css
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git add index-4.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git commit -m 'fix typo of contact number'
+[hotfix/contact-number e3427ea] fix typo of contact number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git push origin hotfix/contact-number
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'hotfix/contact-number' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/git-cafe-exercise/pull/new/hotfix/contact-number
+remote:
+To https://github.com/regis-mucyo/git-cafe-exercise.git
+ * [new branch]      hotfix/contact-number -> hotfix/contact-number
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise>
+```
