@@ -730,3 +730,48 @@ To https://github.com/regis-mucyo/git-cafe-exercise.git
  * [new branch]      feat/update-menu -> feat/update-menu
 PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise>
 ```
+
+## Exercise 2
+
+```bash
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git checkout -b bugfix/rename-file
+Switched to a new branch 'bugfix/rename-file'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git branch -d bugfix/rename-file
+error: the branch 'bugfix/rename-file' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D bugfix/rename-file'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git branch -D bugfix/rename-file
+Deleted branch bugfix/rename-file (was 222f598).
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git checkout -b bugfix/rename-title
+Switched to a new branch 'bugfix/rename-title'
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git status
+On branch bugfix/rename-title
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git add index-4.html
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git commit -m 'fix bug of title name'
+[bugfix/rename-title c30f6c2] fix bug of title name
+ 1 file changed, 232 insertions(+), 164 deletions(-)
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise> git push origin bugfix/rename-title
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.41 KiB | 724.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bugfix/rename-title' on GitHub by visiting:
+remote:      https://github.com/regis-mucyo/git-cafe-exercise/pull/new/bugfix/rename-title
+remote:
+To https://github.com/regis-mucyo/git-cafe-exercise.git
+ * [new branch]      bugfix/rename-title -> bugfix/rename-title
+PS D:\The Gym's\PHASE 2\Git Learning\Git Exercises\cloned\git-cafe-exercise>
+```
